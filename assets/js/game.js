@@ -95,4 +95,4 @@ for (var i = 0; i < enemyNames.length; i++) {
   }
 }
 
-// code code code code // Practice!
+// continue practicing javascript // it is fun but overwhelming at times
