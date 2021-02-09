@@ -158,6 +158,39 @@ var shop = function() {
       break;
   }
 };
+// function to generate a random numeric value
+var randomNumber = function(min, max) {
+  var value = Math.floor(Math.random() * (max - min) + min);
+
+  return value;
+};
+/* END GAME FUNCTIONS */
+
+/* GAME INFORMATION / VARIABLES */
+
+// player information
+var playerInfo = {
+  name: window.prompt("What is your robot's name?"),
+  health: 100,
+  attack: 10,
+  money: 10,
+  reset: function() {
+    this.health = 100;
+    this.money = 10;
+    this.attack = 10;
+  },
+  refillHealth: function() {
+    window.alert("Refilling player's health by 20 for 7 dollars.");
+    this.health += 20;
+    this.money -= 7;
+  },
+  upgradeAttack: function() {
+    window.alert("Upgrading player's attack by 6 for 7 dollars.");
+    this.attack += 6;
+    this.money -= 7;
+  }
+};
+
 // start game when the page loads
 startGame();
 // game is functional with the shop
